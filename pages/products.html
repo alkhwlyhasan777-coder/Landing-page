@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse our complete range of food products with advanced filters and search.">
+    <title>Products - FoodHub</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="../css/variable.css">
+    <link rel="stylesheet" href="../css/globel.css">
+    <link rel="stylesheet" href="../css/navbar.css">
+    <link rel="stylesheet" href="../css/products-page.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/responsive.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1 class="logo">🍔 FoodHub</h1>
+            </div>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="../index.html" class="nav-link">Home</a></li>
+                <li><a href="../pages/products.html" class="nav-link active">Products</a></li>
+                <li><a href="../pages/about.html" class="nav-link">About</a></li>
+                <li><a href="../pages/contact.html" class="nav-link">Contact</a></li>
+                <li>
+                    <button class="btn-theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        🌙
+                    </button>
+                </li>
+                <li>
+                    <a href="../pages/card.html" class="cart-link">
+                        🛒 <span class="cart-count" id="cartCount">0</span>
+                    </a>
+                </li>
+            </ul>
+            
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Page Header -->
+    <section class="products-header">
+        <div class="container">
+            <h1>Our Products</h1>
+            <p>Explore our wide variety of premium food products</p>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="products-wrapper">
+                <!-- Filters Sidebar -->
+                <aside class="filters-sidebar">
+                    <h3>Filters</h3>
+                    
+                    <!-- Search -->
+                    <div class="filter-group">
+                        <label for="searchInput">Search Products</label>
+                        <input type="text" id="searchInput" placeholder="Product name...">
+                    </div>
+
+                    <!-- Category Filter -->
+                    <div class="filter-group">
+                        <label for="categoryFilter">Category</label>
+                        <select id="categoryFilter">
+                            <option value="">All Categories</option>
+                            <option value="fast-food">Fast Food</option>
+                            <option value="healthy">Healthy Food</option>
+                            <option value="desserts">Desserts</option>
+                            <option value="beverages">Beverages</option>
+                        </select>
+                    </div>
+
+                    <!-- Price Filter -->
+                    <div class="filter-group">
+                        <label for="priceRange">Price Range: $<span id="priceValue">100</span></label>
+                        <input type="range" id="priceRange" min="0" max="100" value="100">
+                    </div>
+
+                    <!-- Rating Filter -->
+                    <div class="filter-group">
+                        <label for="ratingFilter">Minimum Rating</label>
+                        <select id="ratingFilter">
+                            <option value="">All Ratings</option>
+                            <option value="4">⭐ 4+ Stars</option>
+                            <option value="3">⭐ 3+ Stars</option>
+                            <option value="2">⭐ 2+ Stars</option>
+                        </select>
+                    </div>
+
+                    <!-- Reset Button -->
+                    <button class="btn btn-secondary" id="resetFilters" style="width: 100%;">Reset Filters</button>
+                </aside>
+
+                <!-- Products Grid -->
+                <div class="products-main">
+                    <div class="products-sorting">
+                        <label for="sortBy">Sort by:</label>
+                        <select id="sortBy">
+                            <option value="newest">Newest</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="rating">Highest Rated</option>
+                        </select>
+                    </div>
+
+                    <div class="products-grid" id="productsGrid">
+                        <!-- Populated by JavaScript -->
+                    </div>
+
+                    <!-- No Products Message -->
+                    <div class="no-products" id="noProducts" style="display: none;">
+                        <p>No products found. Try adjusting your filters.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About FoodHub</h3>
+                    <p>Your trusted destination for premium food products.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook">f</a>
+                        <a href="#" aria-label="Twitter">𝕏</a>
+                        <a href="#" aria-label="Instagram">📷</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FoodHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../javascript/theme.js"></script>
+    <script src="../javascript/card.js"></script>
+    <script src="../javascript/products-data.js"></script>
+    <script src="../javascript/products-page.js"></script>
+    <script src="../javascript/navbar.js"></script>
+</body>
+</html>

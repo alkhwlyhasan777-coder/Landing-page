@@ -1,0 +1,74 @@
+:root {
+    /* Primary Colors */
+    --primary-color: #FF6B6B;
+    --secondary-color: #4ECDC4;
+    --accent-color: #FFE66D;
+    
+    /* Neutral Colors */
+    --dark-bg: #0F1419;
+    --light-bg: #FFFFFF;
+    --dark-text: #1A1A1A;
+    --light-text: #FFFFFF;
+    --gray-200: #F5F5F5;
+    --gray-300: #E0E0E0;
+    --gray-400: #B0B0B0;
+    --gray-500: #808080;
+    
+    /* Status Colors */
+    --success: #27AE60;
+    --warning: #F39C12;
+    --danger: #E74C3C;
+    --info: #3498DB;
+    
+    /* Font Family */
+    --font-family: 'Poppins', sans-serif;
+    
+    /* Font Sizes */
+    --fs-h1: 2.5rem;
+    --fs-h2: 2rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1rem;
+    --fs-small: 0.875rem;
+    
+    /* Spacing */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 1rem;
+    --spacing-md: 1.5rem;
+    --spacing-lg: 2rem;
+    --spacing-xl: 3rem;
+    --spacing-xxl: 4rem;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+    --radius-xl: 16px;
+    
+    /* Shadows */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.15);
+    --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.2);
+    
+    /* Transitions */
+    --transition: all 0.3s ease-in-out;
+    
+    /* Z-Index */
+    --z-dropdown: 100;
+    --z-sticky: 1000;
+    --z-fixed: 1020;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+}
+
+/* Dark Mode Variables */
+[data-theme="dark"] {
+    --dark-bg: #1A1A1A;
+    --light-bg: #2D2D2D;
+    --dark-text: #FFFFFF;
+    --light-text: #0F1419;
+    --gray-200: #3A3A3A;
+    --gray-300: #4A4A4A;
+    --gray-400: #707070;
+    --gray-500: #B0B0B0;
+}
