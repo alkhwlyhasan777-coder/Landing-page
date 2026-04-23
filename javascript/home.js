@@ -12,7 +12,7 @@ function renderCategories() {
 
     categoriesGrid.innerHTML = categories.map(category => `
         <div class="category-card" onclick="filterByCategory('${category.name.toLowerCase().replace(' ', '-')}')">                                   
-            <a href="../pages/products.html">
+            <a href="./pages/products.html">
                 <h3>${category.emoji}</h3>
                 <p>${category.name}</p>
             </a>
